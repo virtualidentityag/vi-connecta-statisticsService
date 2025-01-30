@@ -13,7 +13,6 @@ import java.util.Map;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
-import org.keycloak.adapters.springsecurity.token.KeycloakAuthenticationToken;
 import org.keycloak.representations.AccessToken;
 import org.keycloak.representations.AccessToken.Access;
 import org.mockito.Answers;
@@ -30,9 +29,6 @@ class AllTenantAccessTenantResolverTest {
   public static final long TECHNICAL_CONTEXT = 0L;
   @Mock
   HttpServletRequest authenticatedRequest;
-
-  @Mock(answer = Answers.RETURNS_DEEP_STUBS)
-  KeycloakAuthenticationToken token;
 
   @Mock(answer = Answers.RETURNS_DEEP_STUBS)
   AccessToken accessToken;
